@@ -1,0 +1,13 @@
+{% include 'base.html.twig' %}
+{% block body %}
+{% for user in data %}
+    <li>
+        {{ user.getName() }}
+        {{ user.getPrenom() }}
+        {{ user.getEmail() }}
+        {{ user.getTel() }}
+    </li>
+
+    <a class="btn btn-primary" href="/contact" role="button">Ajouter un contact</a>
+{% endfor %}
+{% endblock %}
