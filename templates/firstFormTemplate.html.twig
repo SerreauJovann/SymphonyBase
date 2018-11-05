@@ -1,0 +1,19 @@
+{% include 'base.html.twig' %}
+{% block body %}
+            <h1>Mon formulaire</h1>
+            {% form_theme data 'bootstrap_4_horizontal_layout.html.twig' %}
+            {{ form_start(data) }}
+            {{ form_widget(data) }}
+            {{ form_end(data) }}
+        <h1>Liste des contact </h1>
+        {% for user in client %}
+            <li>
+                {{ user.getName() }}
+                {{ user.getPrenom() }}
+                {{ user.getEmail() }}
+                {{ user.getTel() }}
+            </li>
+        {% endfor %}
+    </div>
+{% endblock %}
+
